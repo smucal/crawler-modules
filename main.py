@@ -1,11 +1,14 @@
-from bs4 import BeautifulSoup
 import requests
-# Here, we're just importing both Beautiful Soup and the Requests library
-page_link = 'http://the_url_you_want_to_scrape.scrape_it_real_good.com'
-# this is the url that we've already determined is safe and legal to scrape from.
-page_response = requests.get(page_link, timeout=5)
 
-print(page_response)
+response = requests.get('https://github.com')
+
+print(response.content)
+
+
+# from bs4 import BeautifulSoup
+
+# Here, we're just importing both Beautiful Soup and the Requests library
+# this is the url that we've already determined is safe and legal to scrape from.
 
 # # here, we fetch the content from the url, using the requests library
 # page_content = BeautifulSoup(page_response.content, "html.parser")
